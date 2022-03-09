@@ -1,14 +1,16 @@
 import React from 'react'
 import { Users } from './Users'
+import '../App.css';
 
-
-export const Home = () => {
+//Home component with two arguments as users and delUser
+// Users is child component of Home
+export const Home = ({users,delUser}) => {
   return (
-    <>
-    <div className='display-4 d-flex justify-content-center text-dark font-monospace m-2 p-2 '>
+    <div>
+    <p className='head'>
      List of Users
+    </p>
+     <Users users={users} delUser={delUser}/>
     </div>
-    <Users/>
-    </>
   )
 }

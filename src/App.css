@@ -1,0 +1,16 @@
+.head{
+  display:flex;
+  font-size: 65px;
+  justify-content: center;
+  margin-top: 15px;
+  color:#61dafb;
+}
+h1{
+  display:flex;
+  color:#61dafb;
+  justify-content: center;
+  margin: 15px;
+}
+td,th{
+  color:#61dafb;
+}

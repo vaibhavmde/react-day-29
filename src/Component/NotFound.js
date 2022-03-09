@@ -1,9 +1,11 @@
 import React from 'react';
+import '../App.css';
 
+//NotFound component to pop when unknown url pass
 export const NotFound = () => {
   return (
     <div>
-      <div className='display-5 d-flex justify-content-center'>
+      <div className='error'>
         Error 404 Page Not Found
       </div>
     </div>

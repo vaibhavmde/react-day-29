@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
 
 // Edit component with two arguments users and update
 export const Edit = ({users,update}) => {
@@ -25,47 +27,40 @@ export const Edit = ({users,update}) => {
         await update(user,id);
         navigate('/profile/:id');
       }}>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Enter your FirstName"
-            value={field.Firstname}
-            onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Enter your LastName"
-            value={field.Lastname}
-            onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="number"
-            className="form-control"
-            placeholder="Enter your EmpId"
-            value={field.Empid}
-            disabled
-            onChange={(e)=>{setfield({...field,Empid:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Enter your City"
-            value={field.City}
-            onChange={(e)=>{setfield({...field,City:e.target.value})}}
-            required
-          />
-        </div>
+       <FormControl>
+      <TextField
+        required
+       id="demo"
+        value={field.Firstname}
+        onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
+        label="FirstName"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        required
+        id="demo"
+        value={field.Lastname}
+        onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
+        label="LastName"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        disabled
+        id="demo"
+        type="number"
+        value={field.Empid}
+        onChange={(e)=>{setfield({...field,Empid:e.target.value})}}
+        label="Employee ID"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        required
+        id="demo"
+        value={field.City}
+        onChange={(e)=>{setfield({...field,City:e.target.value})}}
+        label="City"
+      /></FormControl>
+      <br/>
         <div className="d-flex justify-content-center">
           <button
             className="btn btn-warning"

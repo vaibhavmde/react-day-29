@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import {useNavigate} from 'react-router-dom';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
 
 // AddUser component with one arguments addUsers
 export const AddUser = ({addUsers}) => {
@@ -21,54 +23,48 @@ export const AddUser = ({addUsers}) => {
       await addUsers(field);
        navigate('/');
       }}>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="...FirstName"
-            value={field.Firstname}
-            onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="...LastName"
-            value={field.Lastname}
-            onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="number"
-            className="form-control"
-            placeholder="...EmpId"
-            value={field.Empid}
-            onChange={(e)=>{setfield({...field,Empid:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="m-2 p-2">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="...City"
-            value={field.City}
-            onChange={(e)=>{setfield({...field,City:e.target.value})}}
-            required
-          />
-        </div>
-        <div className="d-flex justify-content-center">
+      <FormControl>
+      <TextField
+        required
+       id="demo"
+        value={field.Firstname}
+        onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
+        label="FirstName"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        required
+        id="demo"
+        value={field.Lastname}
+        onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
+        label="LastName"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        required
+        id="demo"
+        type="number"
+        value={field.Empid}
+        onChange={(e)=>{setfield({...field,Empid:e.target.value})}}
+        label="Employee ID"
+      /></FormControl><br/><br/>
+      <FormControl>
+      <TextField
+        required
+        id="demo"
+        value={field.City}
+        onChange={(e)=>{setfield({...field,City:e.target.value})}}
+        label="City"
+      /></FormControl>
+      <br/>
+      <div className="d-flex justify-content-center">
           <button
             className="btn btn-primary"
           >
             ADD
           </button>
         </div>
-      </form>
+        </form>
     </div>
   );
 };

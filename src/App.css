@@ -28,6 +28,7 @@ td,th{
  }
  .App{
    height:100vh;
+   width:100vw; 
  }
  .drow{
    height:100vh;
@@ -37,7 +38,7 @@ td,th{
  .main{
   background-color:#20232a;
   height:100vh;
-  width:100vh;
+  width:100vw;
  }
  #demo{
    color:whitesmoke;

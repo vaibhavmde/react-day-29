@@ -7,9 +7,9 @@ import '../App.css';
 export const Home = ({users,delUser}) => {
   return (
     <div>
-    <p className='head'>
+    <strong className='head' >
      List of Users
-    </p>
+     </strong> 
      <Users users={users} delUser={delUser}/>
     </div>
   )

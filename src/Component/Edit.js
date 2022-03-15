@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
 
-
 // Edit component with two arguments users and update
 export const Edit = ({users,update}) => {
   // useParams gives the id of user
@@ -21,10 +20,10 @@ export const Edit = ({users,update}) => {
   return (
     <div className="container">
       <h1>Edit</h1>
-      <form className='d-flex flex-column m-4 ' onSubmit={async(e)=>{e.preventDefault();
+      <form className='d-flex flex-column m-2 ' onSubmit={async(e)=>{e.preventDefault();
         user=field;
         await update(user,id);
-        navigate('/');
+        navigate('/profile/:id');
       }}>
         <div className="m-2 p-2">
           <input
@@ -71,7 +70,7 @@ export const Edit = ({users,update}) => {
           <button
             className="btn btn-warning"
           >
-            Update User
+            Update Profile
           </button>
         </div>
       </form>

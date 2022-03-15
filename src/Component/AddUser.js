@@ -25,7 +25,7 @@ export const AddUser = ({addUsers}) => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter your FirstName"
+            placeholder="...FirstName"
             value={field.Firstname}
             onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
             required
@@ -35,7 +35,7 @@ export const AddUser = ({addUsers}) => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter your LastName"
+            placeholder="...LastName"
             value={field.Lastname}
             onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
             required
@@ -45,7 +45,7 @@ export const AddUser = ({addUsers}) => {
           <input
             type="number"
             className="form-control"
-            placeholder="Enter your EmpId"
+            placeholder="...EmpId"
             value={field.Empid}
             onChange={(e)=>{setfield({...field,Empid:e.target.value})}}
             required
@@ -55,7 +55,7 @@ export const AddUser = ({addUsers}) => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter your City"
+            placeholder="...City"
             value={field.City}
             onChange={(e)=>{setfield({...field,City:e.target.value})}}
             required

@@ -1,16 +1,41 @@
+
 .head{
   display:flex;
   font-size: 65px;
   justify-content: center;
   margin-top: 15px;
-  color:#61dafb;
+  color:lightslategray;
 }
 h1{
   display:flex;
-  color:#61dafb;
+  color:lightslategray;
   justify-content: center;
   margin: 15px;
 }
 td,th{
-  color:#61dafb;
+  color:lightslategray;
 }
+
+ #list li{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+ }
+ #back{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .App{
+   height:100vh;
+ }
+ .drow{
+   height:100vh;
+  background-color: #20232a;
+   color:lightslategray;
+ }
+ .main{
+  background-color:#20232a;
+  height:100vh;
+  width:100vh;
+ }

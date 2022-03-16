@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {useNavigate} from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 
 // AddUser component with one arguments addUsers
 export const AddUser = ({addUsers}) => {
@@ -66,11 +67,9 @@ export const AddUser = ({addUsers}) => {
       /></FormControl>
       <br/>
       <div className="d-flex justify-content-center">
-          <button
-            className="btn btn-primary"
-          >
+      <Button type='submit' variant="contained" color="error">
             ADD
-          </button>
+          </Button>
         </div>
         </form>
     </div>

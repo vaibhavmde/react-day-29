@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { useParams,useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
+import Button from '@mui/material/Button';
 
 // Edit component with two arguments users and update
 export const Edit = ({users,update}) => {
@@ -68,11 +69,9 @@ export const Edit = ({users,update}) => {
       /></FormControl>
       <br/>
         <div className="d-flex justify-content-center">
-          <button
-            className="btn btn-warning"
-          >
-            Update Profile
-          </button>
+        <Button type='submit' variant="contained" color="error">
+            Edit
+          </Button>
         </div>
       </form>
     </div>

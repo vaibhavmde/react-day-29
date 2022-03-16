@@ -29,7 +29,7 @@ export const View = ({ users }) => {
     </React.Fragment>
   );
   
-
+  
   // displaying the user details
   return (
     <>
@@ -38,10 +38,10 @@ export const View = ({ users }) => {
       <Card variant="outlined">{card}</Card>
       </Box>
     </div>
-     <div className="d-flex justify-content-center">
-     <button className='btn btn-danger' onClick={()=>{navigate('/')}}>Back</button>
-     </div>
-     </>
+    <div className="d-flex justify-content-center">
+    <button className='btn btn-danger' onClick={()=>{navigate('/')}}>Back</button>
+    </div>
+    </>
   );
 };
 

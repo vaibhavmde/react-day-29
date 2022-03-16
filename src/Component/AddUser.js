@@ -26,6 +26,8 @@ export const AddUser = ({addUsers}) => {
       <FormControl>
       <TextField
         required
+        focused
+        color="error"
        id="demo"
         value={field.Firstname}
         onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
@@ -34,6 +36,8 @@ export const AddUser = ({addUsers}) => {
       <FormControl>
       <TextField
         required
+        focused
+        color="error"
         id="demo"
         value={field.Lastname}
         onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
@@ -42,6 +46,8 @@ export const AddUser = ({addUsers}) => {
       <FormControl>
       <TextField
         required
+        focused
+        color="error"
         id="demo"
         type="number"
         value={field.Empid}
@@ -51,6 +57,8 @@ export const AddUser = ({addUsers}) => {
       <FormControl>
       <TextField
         required
+        focused
+        color="error"
         id="demo"
         value={field.City}
         onChange={(e)=>{setfield({...field,City:e.target.value})}}

@@ -31,6 +31,8 @@ export const Edit = ({users,update}) => {
       <TextField
         required
        id="demo"
+       focused
+        color="error"
         value={field.Firstname}
         onChange={(e)=>{setfield({...field,Firstname:e.target.value})}}
         label="FirstName"
@@ -39,6 +41,8 @@ export const Edit = ({users,update}) => {
       <TextField
         required
         id="demo"
+        focused
+        color="error"
         value={field.Lastname}
         onChange={(e)=>{setfield({...field,Lastname:e.target.value})}}
         label="LastName"
@@ -56,6 +60,8 @@ export const Edit = ({users,update}) => {
       <TextField
         required
         id="demo"
+        focused
+        color="error"
         value={field.City}
         onChange={(e)=>{setfield({...field,City:e.target.value})}}
         label="City"
